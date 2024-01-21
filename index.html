@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Color Changing</title>
+
+    <style>
+    /* Body Design Background */
+
+        body {
+            background: linear-gradient(to bottom, rgb(114, 114, 250), rgb(103, 192, 103));
+        }
+/* This is for the font design */
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+/* This is for the buttons and the color changing. */
+        .container {
+            position: relative;
+            width: 1000px;
+            height: 500px;
+            margin-left: 200px;
+            padding: 50px;
+            background-color: pink;
+            box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        #Color {
+            width: 300px;
+            height: 300px;
+            background-color: blue;
+            border-radius: 50%;
+            transition: background-color 0.5s ease;
+        }
+
+        #pupil {
+            position: absolute;
+            top: 34.5%;
+            left: 18%;
+            transform: translate(-50%, -50%);
+            width: 150px; 
+            height: 150px;
+            background-color: black;
+            border-radius: 50%;
+        }
+
+        button {
+            font-size: 2em;
+            font-family: 'Times New Roman', Times, serif;
+            width: 300px;
+            height: 100px;
+            margin-left: auto;
+            margin-top: 50px;
+            opacity: 100%;
+            background-color: beige;
+        }
+
+        button:hover {
+            opacity: 75%;
+        }
+
+/* Trivia and Facts  */
+        .trivia {
+            box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.5);
+            display: inline;
+            position: absolute;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 50px;
+            background-color: azure;
+            font-size: 1em;
+            text-align: left;
+            top: 10%;
+            right: 5%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Activity JavaScript AddEventListener</h1>
+    <h2>Color Change</h2>
+    <h2>All ABOUT EYES!</h2>
+    <div class="container">
+        <div id="Color"></div>
+        <div id="pupil"></div>
+        <button id="and">Change Color</button>
+        <div class="trivia">
+
+            <h2>DID YOU KNOW?</h2>
+            <p>Blue Eyes:
+                Genetic trait resulting from a lack of melanin; <br> more common in people of European descent.</p>
+            <p>Approximately 8-10% of the global population has blue eyes, <br> with a higher prevalence in people of European descent.</p>
+            <hr>
+            <p>Green Eyes:
+                Result from a mix of blue and yellow pigments; relatively rare, 
+                <br>associated with mystery and more common in those with Celtic or Germanic ancestry.
+            </p>
+            <p>
+                Green eyes are rarer, constituting about 1-2% of the world's population, 
+                <br>more commonly found in individuals with Celtic or Germanic ancestry.
+            </p>
+        </div>
+        <p>Why don't you try and click to change color?</p>
+    </div>
+
+    <script>
+        let Color = document.getElementById('Color');
+        let and = document.getElementById('and');
+
+        and.addEventListener("click",
+
+        function changecolor(){
+            if (Color.style.backgroundColor === "green"){
+                Color.style.backgroundColor = "blue";
+            } 
+            else {
+                Color.style.backgroundColor = "green";
+            }
+        });
+
+    </script>
+</body>
+</html>
